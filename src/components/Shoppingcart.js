@@ -1,11 +1,13 @@
+import {useEffect} from 'react';
 import Navbar from './Navbar';
 
-const Shoppingcart = ({shoppingCart}) => {
+const Shoppingcart = ({shoppingCart, totalPrice}) => {
   return (
     <div className="App">
       <Navbar />
       <h1>Cart</h1>
-      <div style={{display:"block"}}>
+      <h3>totalPrice = {totalPrice} </h3>
+      <div style={{display: 'block', alignSelf: 'center'}}>
         {shoppingCart.map(item => {
           return (
             <div

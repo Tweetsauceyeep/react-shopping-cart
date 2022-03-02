@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 
-const Shop = ({products, handleAddToCart}) => {
+const Shop = ({products, handleFunctionsOnClick}) => {
   return (
     <div className="App">
       <Navbar />
@@ -37,7 +37,7 @@ const Shop = ({products, handleAddToCart}) => {
               />
               <div>Price: {item.price}</div>
               <div>Size: {item.size}</div>
-              <button id={item.id} onClick={(e)=>handleAddToCart(e)}>Add to Cart</button>
+              <button id={item.id} onClick={(e)=>handleFunctionsOnClick(e)}>Add to Cart</button>
             </div>
           );
         })}
